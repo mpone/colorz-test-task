@@ -1,4 +1,9 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# Colorz test task
+
+Page with a burger menu button and a square on the center of the screen with 3d effect while clicking on it.<br>
+<br>
+[DEMO LINK](https://mpone.github.io/colorz-test-task/)<br>
+[DESIGN](https://www.oggo.ch/)
+<br>
+- click on a burger menu to see effects;
+- click on a picture to see an effect.

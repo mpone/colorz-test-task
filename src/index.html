@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Colorz test task</title>
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <button
+        type="button"
+        class="header__nav-btn nav-btn"
+      >
+      <div class="nav-btn__bar-wrapper">
+        <span class="nav-btn__bar"></span>
+        <span class="nav-btn__bar"></span>
+        <span class="nav-btn__bar"></span>
+      </div>
+      </button>
+    </header>
+
+    <main class="main">
+      <div class="square">
+        <div class="square__inner">
+          <img
+            class="square__card square__card--front"
+            src="images/promo.jpg"
+            alt="promo"
+          >
+
+          <video
+            class="square__card square__card--back"
+            preload="auto"
+            loop="true"
+            autoplay="true"
+            muted="muted"
+          >
+            <source src="images/promo-hd.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </main>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

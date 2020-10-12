@@ -1,0 +1,102 @@
+.nav-btn {
+  position: relative;
+  width: $btnMeasurements;
+  height: $btnMeasurements;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background $animOnHover,
+    width $animOnHover,
+    height $animOnHover;
+
+  &::after {
+    content: "";
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    height: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    width: $btnMeasurementsOnHover;
+    height: $btnMeasurementsOnHover;
+    background: $navBtnBgColorOnHover;
+  }
+
+  &--clicked {
+    width: $btnMeasurementsOnHover;
+    height: $btnMeasurementsOnHover;
+    background: $navBtnBgColorOnHover;
+  }
+
+  &__bar-wrapper {
+    position: absolute;
+    top: ($btnMeasurementsOnHover - $barWrapperHeight) / 2;
+    right: ($btnMeasurementsOnHover - $barWrapperWidth) / 2;
+    width: $barWrapperWidth;
+    height: $barWrapperHeight;
+  }
+
+  &__bar {
+    display: block;
+    margin-bottom: 6px;
+    height: 3px;
+    background: $navBtnBarBg;
+    transition: width $animOnHover,
+      opacity $animOnHover,
+      transform $animOnHover;
+
+    &:first-child {
+      width: 85%;
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+
+    &:last-child {
+      width: 55%;
+      margin-bottom: 0;
+    }
+
+    &--hovered {
+      &:first-child {
+        width: 100%;
+      }
+  
+      &:nth-child(2) {
+        width: 55%;
+      }
+  
+      &:last-child {
+        width: 85%;
+        margin-bottom: 0;
+      }
+    }
+
+    &--clicked {
+      &:first-child {
+        width: 100%;
+        transform: translateY(10px) rotate(45deg);
+      }
+  
+      &:nth-child(2) {
+        opacity: 0;
+        width: 55%;
+      }
+  
+      &:last-child {
+        width: 100%;
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
